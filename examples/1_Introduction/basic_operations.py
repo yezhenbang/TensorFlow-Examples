@@ -4,7 +4,7 @@ Basic Operations example using TensorFlow library.
 Author: Aymeric Damien
 Project: https://github.com/aymericdamien/TensorFlow-Examples/
 '''
-
+#%%
 from __future__ import print_function
 
 import tensorflow as tf
@@ -72,4 +72,5 @@ product = tf.matmul(matrix1, matrix2)
 with tf.Session() as sess:
     result = sess.run(product)
     print(result)
+    print(sess.run(tf.add(result, 1)))
     # ==> [[ 12.]]
