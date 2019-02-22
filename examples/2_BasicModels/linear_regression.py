@@ -65,8 +65,8 @@ with tf.Session() as sess:
 
     # Fit all training data
     for epoch in range(training_epochs): #训练次数
-        # for (x, y) in zip(train_X, train_Y): #将X,Y打包成(xi,yi)对的形式
-            # sess.run(optimizer, feed_dict={X: x, Y: y}) #将每组(xi,yi)代入优化器计算
+        for (x, y) in zip(train_X, train_Y): #将X,Y打包成(xi,yi)对的形式
+            sess.run(optimizer, feed_dict={X: x, Y: y}) #将每组(xi,yi)代入优化器计算
 
         # 用下面这句替代上面一层循环，得到接近的结果，但速度明显提升，为什么不这样用，存疑。
         # sess.run(optimizer, feed_dict={X: train_X, Y:train_Y})
@@ -84,6 +84,7 @@ with tf.Session() as sess:
     print("Training cost=", training_cost, "W=", sess.run(W), "b=", sess.run(b), '\n')
 
     # Graphic display
+    # 图形化等
     plt.plot(train_X, train_Y, 'ro', label='Original data')
     plt.plot(train_X, sess.run(W) * train_X + sess.run(b), label='Fitted line')
     plt.legend()
