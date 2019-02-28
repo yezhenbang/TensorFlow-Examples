@@ -10,7 +10,7 @@ Links:
 Author: Aymeric Damien
 Project: https://github.com/aymericdamien/TensorFlow-Examples/
 """
-
+#%%
 from __future__ import print_function
 
 import tensorflow as tf
@@ -32,7 +32,7 @@ mnist = input_data.read_data_sets("/tmp/data/", one_hot=False,
 batch_size = 4096 # The number of samples per batch
 num_classes = 10 # The 10 digits
 num_features = 784 # Each image is 28x28 pixels
-max_steps = 10000
+max_steps = 100
 
 # GBDT Parameters
 learning_rate = 0.1

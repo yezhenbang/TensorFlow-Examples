@@ -6,7 +6,7 @@ This example is using the MNIST database of handwritten digits
 Author: Aymeric Damien
 Project: https://github.com/aymericdamien/TensorFlow-Examples/
 '''
-
+#%%
 from __future__ import print_function
 
 import numpy as np
